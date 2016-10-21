@@ -1,0 +1,89 @@
+$light-blue-100: #B3E5FC;
+$light-blue-500: #03A9F4;
+
+$primary-color-dark:   #455A64;
+$primary-color:        #607D8B;
+$primary-color-light:  #CFD8DC;
+$primary-color-text:   #FFFFFF;
+$accent-color:         $light-blue-500;
+$accent-color-light:   $light-blue-100;
+$primary-text-color:   #212121;
+$secondary-text-color: #757575;
+$divider-color:        #BDBDBD;
+
+$common-sep: 8px;
+
+$shadow-elevation-2dp: 0 2px 2px 0 rgba(0,0,0,.14),0 3px 1px -2px rgba(0,0,0,.2),0 1px 5px 0 rgba(0,0,0,.12);
+$shadow-elevation-4dp: 0 4px 4px 0 rgba(0,0,0,.14),0 4px 2px -2px rgba(0,0,0,.2),0 1px 10px 0 rgba(0,0,0,.12);
+
+@font-face {
+    font-family: "Roboto";
+    src: url("./Roboto-Regular.ttf");
+}
+
+body{
+    font-family: "Roboto";
+    margin: 0;
+
+    background-color: #FAFAFA;
+}
+
+@import "material";
+div#toggle-component{
+    @include toggle-switch(14px, 36px, $accent-color-light, $divider-color, 20px, $accent-color, $accent-color);
+}
+
+div{
+    &#header{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        background-color: $primary-color;
+        color: $primary-color-text;
+
+        padding: 1em 1.5em 1em 1.5em;
+        margin-bottom: $common-sep;
+    }
+    &#card{
+        // border: 1px solid black;
+        border-radius: 2px;
+        box-shadow: $shadow-elevation-2dp;
+        background-color: #FFFFFF;
+
+        margin: 0 $common-sep $common-sep $common-sep;
+        div#headerDiv{
+            span#title{
+                display: inline-block;
+                font-size: 24px;
+
+                padding-top: 3 * $common-sep;
+                padding-left: 2 * $common-sep;
+                padding-bottom: 2 * $common-sep;
+            }
+        }
+        div#listDiv{
+            background-color: $accent-color;
+            border-top: 1px solid #FAFAFA;
+            font-size: 18px;
+
+            padding-left: 2 * $common-sep;
+            div#auth-button{
+                // background-color: lightseagreen;
+                background-color: #FFFFFF;
+
+                padding: 1em 0 1em 0;
+                margin-left: -$common-sep;
+                padding-left: $common-sep;
+                z-index: -1;
+
+                &:hover{
+                    background-color: $primary-color-light;
+                    z-index: 1;
+                }
+                &:active{
+
+                }
+            }
+        }
+    }
+}

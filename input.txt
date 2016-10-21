@@ -1,0 +1,8 @@
+# GroupName-Serial1
+account1 password1 description1
+account2 password2 description2
+account3 password3
+
+# Group2
+acc1 pwd
+acc2 pwd

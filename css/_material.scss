@@ -1,0 +1,52 @@
+
+@import "compass";
+
+/*PRIVATE MIXIN*/
+@mixin thumb($thumb-color: $thumb-color-on, $thumb-position: 0px){
+    left: $thumb-position;
+    background-color: $thumb-color;
+}
+/*PUBLIC MIXIN*/
+@mixin toggle-switch($track-height, $track-width, $track-color-on, $track-color-off, $thumb-diameter, $thumb-color-on, $thumb-color-off){
+    // Parameter
+    $track-distance: $track-width - $thumb-diameter;
+    // Scss
+    display: inline-flex;
+    align-items: center;
+    span#title{
+        padding-right: $common-sep;
+    }
+    /**Thumb + Track*/
+    div#toggle-switch{
+        width: $track-width;
+        height: $track-height;
+        border-radius: $track-height / 2;
+
+        background-color: $track-color-off;
+        @include transition(background-color .3s linear);
+
+        /*Thumb Component*/
+        // thumb-off
+        &::before{
+            content: '';
+            width: $thumb-diameter;
+            height: $thumb-diameter;
+            position: relative;
+            display: inline-block;
+            border-radius: $thumb-diameter/2;
+            top: ($track-height - $thumb-diameter) / 2;
+            box-sizing: border-box;
+            @include transition(left .3s ease);
+            /*Parameter: thumb-color, thumb-position*/
+            @include thumb($thumb-color-off, 0);
+        }
+        // thumb-on
+        &.active{
+            background-color: $track-color-on;
+            &::before{
+                /*Parameter: thumb-color, thumb-position*/
+                @include thumb($thumb-color-on, $track-distance);
+            }
+        }
+    }
+}

@@ -1,0 +1,14 @@
+# NodeJs
+node_modules
+npm-debug.log
+
+# MAC
+.DS_Store
+~*
+
+# Project Specific
+backup
+
+# Sass
+.sass-cache/
+*.css.map

@@ -1,0 +1,25 @@
+{
+  "name": "ez-key",
+  "version": "0.1.0",
+  "description": "easily manage and share testing accounts",
+  "main": "main.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "package": "asar pack ez-key-darwin-x64/ez-key.app/Contents/Resources/app ez-key-darwin-x64/ez-key.app/Contents/Resources/app.asar && rm -r ez-key-darwin-x64/ez-key.app/Contents/Resources/app",
+    "build": "electron-packager . --ignore={input.txt,.gitignore,.scss$,.sass-cache,.css.map$,backup,README.md} --overwrite --prune ez-key && cp input.txt ez-key-darwin-x64",
+    "sass": "sass --watch ./css/style.scss:./css/style.css",
+    "start": "./node_modules/.bin/electron ."
+  },
+  "author": "swat",
+  "license": "MIT",
+  "devDependencies": {
+    "asar": "^0.12.3",
+    "electron": "^1.4.3",
+    "electron-packager": "^8.1.0"
+  },
+  "dependencies": {
+    "electron-is-dev": "^0.1.2",
+    "fix-path": "^2.0.0",
+    "jquery": "^3.1.1"
+  }
+}

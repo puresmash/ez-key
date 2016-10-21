@@ -1,0 +1,86 @@
+@font-face {
+  font-family: "Roboto";
+  src: url("./Roboto-Regular.ttf"); }
+body {
+  font-family: "Roboto";
+  margin: 0;
+  background-color: #FAFAFA; }
+
+/*PRIVATE MIXIN*/
+/*PUBLIC MIXIN*/
+div#toggle-component {
+  display: inline-flex;
+  align-items: center;
+  /**Thumb + Track*/ }
+  div#toggle-component span#title {
+    padding-right: 8px; }
+  div#toggle-component div#toggle-switch {
+    width: 36px;
+    height: 14px;
+    border-radius: 7px;
+    background-color: #BDBDBD;
+    -webkit-transition: background-color 0.3s linear;
+    -moz-transition: background-color 0.3s linear;
+    -o-transition: background-color 0.3s linear;
+    -ms-transition: background-color 0.3s linear;
+    transition: background-color 0.3s linear;
+    /*Thumb Component*/ }
+    div#toggle-component div#toggle-switch::before {
+      content: '';
+      width: 20px;
+      height: 20px;
+      position: relative;
+      display: inline-block;
+      border-radius: 10px;
+      top: -3px;
+      box-sizing: border-box;
+      -webkit-transition: left 0.3s ease;
+      -moz-transition: left 0.3s ease;
+      -o-transition: left 0.3s ease;
+      -ms-transition: left 0.3s ease;
+      transition: left 0.3s ease;
+      /*Parameter: thumb-color, thumb-position*/
+      left: 0;
+      background-color: #03A9F4; }
+    div#toggle-component div#toggle-switch.active {
+      background-color: #B3E5FC; }
+      div#toggle-component div#toggle-switch.active::before {
+        /*Parameter: thumb-color, thumb-position*/
+        left: 16px;
+        background-color: #03A9F4; }
+
+div#header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #607D8B;
+  color: #FFFFFF;
+  padding: 1em 1.5em 1em 1.5em;
+  margin-bottom: 8px; }
+div#card {
+  border-radius: 2px;
+  box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 3px 1px -2px rgba(0, 0, 0, 0.2), 0 1px 5px 0 rgba(0, 0, 0, 0.12);
+  background-color: #FFFFFF;
+  margin: 0 8px 8px 8px; }
+  div#card div#headerDiv span#title {
+    display: inline-block;
+    font-size: 24px;
+    padding-top: 24px;
+    padding-left: 16px;
+    padding-bottom: 16px; }
+  div#card div#listDiv {
+    background-color: #03A9F4;
+    border-top: 1px solid #FAFAFA;
+    font-size: 18px;
+    padding-left: 16px; }
+    div#card div#listDiv div#auth-button {
+      background-color: #FFFFFF;
+      padding: 1em 0 1em 0;
+      margin-left: -8px;
+      padding-left: 8px;
+      z-index: -1; }
+      div#card div#listDiv div#auth-button:hover {
+        background-color: #CFD8DC;
+        z-index: 1; }
+
+/*# sourceMappingURL=style.css.map */
