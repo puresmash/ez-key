@@ -11,19 +11,6 @@ This tool can help you grouping your testing accounts obvious at a glance. You c
 
 **Mac**
 
-Install [SASS](http://sass-lang.com/) first.
-
-```sh
-sudo gem install sass
-sass -v
-```
-
-Compile scss file for css.
-
-```sh
-npm run sass
-```
-
 Download Dependencies with npm.
 
 ```sh

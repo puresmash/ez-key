@@ -5,6 +5,8 @@ const execFile = require('child_process').execFile;
 const path = require('path');
 const fixPath = require('fix-path')
 
+const scriptsPath = path.join(__dirname, 'dist');
+
 // Keep a global reference of the window object, if you don't, the window will
 // be closed automatically when the JavaScript object is garbage collected.
 let win;
@@ -59,8 +61,8 @@ app.on('activate', function () {
 })
 
 let script = {
-    darwin: path.join(__dirname, 'ezkey.sh'),
-    win32: path.join(__dirname, 'ezkey.bat')
+    darwin: path.join(scriptsPath, 'ezkey.sh'),
+    win32: path.join(scriptsPath, 'ezkey.bat')
 };
 
 let fileName = script.darwin;
