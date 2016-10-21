@@ -39,6 +39,21 @@ acc1 pwd
 acc2 pwd
 ```
 
+**Customized Style**
+
+Install [SASS](http://sass-lang.com/) first.
+
+```sh
+sudo gem install sass
+sass -v
+```
+
+Compile scss file for css.
+
+```sh
+npm run sass
+```
+
 ## Remark
 
 There are issues around Mac **launchd function**. It will discards enviroment variable $PATH which declares in your .bash_profile file. So don't forget calling `fixPath()` before using command like `adb shell input` or you'll get "command not found error". Thanks for [fix-path](https://github.com/sindresorhus/fix-path) module.
