@@ -56,6 +56,6 @@ npm run sass
 
 ## Remark
 
-There are issues around Mac **launchd function**. It will discards enviroment variable $PATH which declares in your .bash_profile file. So don't forget calling `fixPath()` before using command like `adb shell input` or you'll get "command not found error". Thanks for [fix-path](https://github.com/sindresorhus/fix-path) module.
+There are issues around Mac **launchd function**. It will discard enviroment variable $PATH which declares in your .bash_profile file. So don't forget calling `fixPath()` before using command like `adb shell input` or you'll get "command not found error". Thanks for [fix-path](https://github.com/sindresorhus/fix-path) module.
 
 Ths module [asar](https://github.com/electron/asar) will [copy your batch out](https://github.com/electron/electron/issues/3512) to `/var`, so always use `execFile` instead of `spawn` or `exec`.
